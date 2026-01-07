@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAULT-TEC ARCHIVES | Public Access Terminal</title>
+    <link rel="icon" type="image/webp" href="assets/images/VaultTecLogo.webp">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="scanline"></div>
+    <div class="container">
+        <!-- HEADER -->
+        <header class="header">
+            <!-- TERMINAL TOGGLE BUTTON -->
+            <button id="theme-toggle" onclick="toggleTerminalMode()">[ ACCESS TERMINAL MODE ]</button>
+            
+            <div class="vault-logo">VAULT-TEC</div>
+            <div class="vault-number">ARCHIVES</div>
+            <div class="tagline">
+                OFFIZIELLES ÖDLAND-TERMINAL<br>
+                <small>Datenbankzugriff: Autorisiert für Vault-Bewohner & Ödland-Wanderer</small>
+            </div>
+            <div class="vault-boy-animation"><img src="assets/images/Vault_Boy_artwork.png" alt="Vault Boy"></div>
+        </header>
+
+        <!-- NAVIGATION -->
+        <nav class="nav-menu">
+            <button class="nav-btn active" onclick="showSection('home')">Start</button>
+            <button class="nav-btn" onclick="showSection('timeline')">Zeitlinie</button>
+            <button class="nav-btn" onclick="showSection('vaults')">Vault-Datenbank</button>
+            <button class="nav-btn" onclick="showSection('factions')">Fraktionen</button>
+            <button class="nav-btn" onclick="showSection('locations')">Regionen</button>
+        </nav>
+
+        <!-- CONTENT AREA -->
+        <main id="content-area">
+            
+            <!-- HOME SECTION -->
+            <section id="home" class="section active">
+                <div class="section-title">Willkommen in der Post-Apokalypse</div>
+                <div class="section-content">
+                    <p><strong>Die alte Welt ist fort.</strong> Am 23. Oktober 2077 verwandelte der Große Krieg die Zivilisation innerhalb von zwei Stunden in Asche. Was blieb, war das Ödland: Eine Welt voller mutierter Gefahren, moralischer Abgründe und verstrahlter Ruinen.</p>
+                    <p>Dieses Terminal dient als dein <strong>Überlebens-Guide</strong>. Egal ob du ein privilegierter Vault-Bewohner bist, der zum ersten Mal die Sonne sieht, oder ein abgehärteter Ödland-Wanderer auf der Suche nach Kronkorken – hier findest du die Daten, die dich am Leben halten.</p>
+                </div>
+                
+                <!-- Feature Boxes -->
+                <div style="display: flex; gap: 15px; margin: 20px 0; flex-wrap: wrap;">
+                    <div style="flex: 1; background: rgba(0,0,0,0.1); padding: 15px; border: 1px dashed #4a3b2a;">
+                        <strong style="color: #0047AB;">ARCHIV</strong><br>
+                        <small>Daten zu über 100 Vaults und geheimen Experimenten.</small>
+                    </div>
+                    <div style="flex: 1; background: rgba(0,0,0,0.1); padding: 15px; border: 1px dashed #4a3b2a;">
+                        <strong style="color: #0047AB;">GEFAHREN</strong><br>
+                        <small>Profile der mächtigsten Fraktionen und Mutanten.</small>
+                    </div>
+                    <div style="flex: 1; background: rgba(0,0,0,0.1); padding: 15px; border: 1px dashed #4a3b2a;">
+                        <strong style="color: #0047AB;">REGIONEN</strong><br>
+                        <small>Kartenmaterial von Boston bis New Vegas.</small>
+                    </div>
+                </div>
+
+                <div class="quote-box">
+                    „War. War never changes. Aber Menschen tun es – durch die Wege, die sie gehen.“
+                </div>
+
+                <div class="fact-box">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span>
+                            <strong>SYSTEM-STATUS:</strong> <span class="status-ok">ONLINE</span><br>
+                            <strong>OBERFLÄCHEN-STRAHLUNG:</strong> <span class="status-alert">245 RADS/SEC</span>
+                        </span>
+                        <span style="text-align: right;">
+                            <em>„Denk dran: Nuka-Cola macht den Tag strahlender!“</em>
+                        </span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TIMELINE SECTION -->
+            <section id="timeline" class="section">
+                <div class="section-title">Logbuch der Menschheit</div>
+                <div class="timeline-container">
+                    <div class="timeline-item pre-war">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-date">2052</div>
+                        <div class="timeline-content">
+                            <h3>Die Ressourcenkriege beginnen</h3>
+                            <p>Nationen kollabieren. Die Vereinten Nationen werden aufgelöst. Europa versinkt im Chaos.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item pre-war">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-date">2076</div>
+                        <div class="timeline-content">
+                            <h3>Annexion von Kanada</h3>
+                            <p>Die USA annektieren Kanada gewaltsam. Erster Einsatz der T-51b Power Armor.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item great-war">
+                        <div class="timeline-marker icon">☢️</div>
+                        <div class="timeline-date">23. Okt 2077</div>
+                        <div class="timeline-content warning-bg">
+                            <h3 style="color: #8b0000; text-transform: uppercase;">Der Große Krieg</h3>
+                            <p><strong>09:47 Uhr:</strong> Die Bomben fallen. Innerhalb von zwei Stunden endet die Zivilisation.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item post-war">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-date">2161 (Fallout 1)</div>
+                        <div class="timeline-content">
+                            <h3>Der Anfang</h3>
+                            <p>Der Vault Dweller verlässt Vault 13 und besiegt den <span class="redacted">Meister</span>.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item post-war">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-date">2241 (Fallout 2)</div>
+                        <div class="timeline-content">
+                            <h3>Der Auserwählte</h3>
+                            <p>Kampf gegen die Enklave und Zerstörung der Ölplattform.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item post-war">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-date">2277 (Fallout 3)</div>
+                        <div class="timeline-content">
+                            <h3>Projekt Purity</h3>
+                            <p>Der Lone Wanderer aktiviert den Wasseraufbereiter im Capital Wasteland.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item post-war">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-date">2281 (New Vegas)</div>
+                        <div class="timeline-content">
+                            <h3>Schlacht um den Hoover Dam</h3>
+                            <p>Entscheidungskampf zwischen NCR, Legion und Mr. House.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item post-war">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-date">2287 (Fallout 4)</div>
+                        <div class="timeline-content">
+                            <h3>Das Institut</h3>
+                            <p>Der Sole Survivor entscheidet über die Zukunft der Synths im Commonwealth.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- VAULTS SECTION -->
+            <section id="vaults" class="section">
+                <div class="section-title">MASTER VAULT DATABASE</div>
+                
+                <div class="vault-filter-container">
+                    <label for="vaultFilter">> FILTER PROTOCOL: </label>
+                    <select id="vaultFilter" onchange="filterVaults()">
+                        <option value="all">>> ZEIGE ALLE DATENSÄTZE</option>
+                        <option value="control">>> KONTROLLGRUPPEN (SICHER)</option>
+                        <option value="experiment">>> EXPERIMENTE (SOZIAL)</option>
+                        <option value="horror">>> GEFAHR / BIOLOGISCH</option>
+                        <option value="cryo">>> KRYOSTASE / ISOLATION</option>
+                        <option value="special">>> SPEZIAL / BIZARR</option>
+                    </select>
+                </div>
+
+                <div class="section-content">
+                    <p>HINWEIS: Wählen Sie ein Filterprotokoll, um spezifische Vault-Typen anzuzeigen. Zugriff beschränkt.</p>
+                </div>
+
+                <div class="vault-grid" id="vaultGrid">
+                    <!-- Cards -->
+                    <div class="vault-card" data-category="control">
+                        <div class="vault-status status-failed">GESCHEITERT</div>
+                        <div class="vault-card-number">13</div>
+                        <div class="vault-card-title">Der Anfang</div>
+                        <div class="vault-card-text">Kalifornien. Kontrollgruppe. Sollte 200 Jahre geschlossen bleiben. Wasserchip ausgefallen.</div>
+                    </div>
+                    <div class="vault-card" data-category="control">
+                        <div class="vault-status status-active">GEÖFFNET</div>
+                        <div class="vault-card-number">76</div>
+                        <div class="vault-card-title">Reclamation Day</div>
+                        <div class="vault-card-text">West Virginia. Kontroll-Vault zur Wiederbesiedlung nach 25 Jahren.</div>
+                    </div>
+                    <div class="vault-card" data-category="cryo">
+                        <div class="vault-status status-unknown">ISOLIERT</div>
+                        <div class="vault-card-number">101</div>
+                        <div class="vault-card-title">Isolation</div>
+                        <div class="vault-card-text">Washington D.C. Totale Isolation. Diktatorische Führung.</div>
+                    </div>
+                    <div class="vault-card" data-category="cryo">
+                        <div class="vault-status status-offline">OFFLINE</div>
+                        <div class="vault-card-number">111</div>
+                        <div class="vault-card-title">Kryostase</div>
+                        <div class="vault-card-text">Boston. Langzeitwirkung von Kryoschlaf an Unfreiwilligen.</div>
+                    </div>
+                    <div class="vault-card" data-category="experiment">
+                        <div class="vault-status status-active">AKTIV</div>
+                        <div class="vault-card-number">33</div>
+                        <div class="vault-card-title">Bud's Buds</div>
+                        <div class="vault-card-text">Santa Monica. Züchtung von loyalen Managern für Vault-Tec.</div>
+                    </div>
+
+                    <!-- List Rows (Priorität B) -->
+                    <div class="vault-row vault-card" data-category="control">
+                        <span class="v-num">Vault 3</span>
+                        <span class="v-desc">Mojave. Zu vertrauensselig. Von Fiends massakriert.</span>
+                        <span class="v-stat status-failed">TOT</span>
+                    </div>
+                    <div class="vault-row vault-card" data-category="special">
+                        <span class="v-num">Vault 4</span>
+                        <span class="v-desc">DNA-Kreuzung mit Gulpners. Heute friedliche Sekte.</span>
+                        <span class="v-stat status-active">HYBRID</span>
+                    </div>
+                    <div class="vault-row vault-card" data-category="control">
+                        <span class="v-num">Vault 8</span>
+                        <span class="v-desc">Vault City. Erfolgreiche High-Tech Stadt.</span>
+                        <span class="v-stat status-active">ERFOLG</span>
+                    </div>
+                    <div class="vault-row vault-card" data-category="experiment">
+                        <span class="v-num">Vault 11</span>
+                        <span class="v-desc">Opfer-Experiment. Jährliche Hinrichtung gefordert.</span>
+                        <span class="v-stat status-failed">LEER</span>
+                    </div>
+                    <div class="vault-row vault-card" data-category="horror">
+                        <span class="v-num">Vault 12</span>
+                        <span class="v-desc">Necropolis. Strahlen-Test. Alle sind Ghule.</span>
+                        <span class="v-stat status-failed">GHULE</span>
+                    </div>
+                    <div class="vault-row vault-card" data-category="special">
+                        <span class="v-num">Vault 21</span>
+                        <span class="v-desc">New Vegas. Konflikte durch Glücksspiel gelöst.</span>
+                        <span class="v-stat status-active">HOTEL</span>
+                    </div>
+                    <div class="vault-row vault-card" data-category="horror">
+                        <span class="v-num">Vault 22</span>
+                        <span class="v-desc">Sporen-Virus verwandelte Bewohner in Pflanzen-Monster.</span>
+                        <span class="v-stat status-danger">BIOHAZARD</span>
+                    </div>
+                    <div class="vault-row vault-card" data-category="horror">
+                        <span class="v-num">Vault 63</span>
+                        <span class="v-desc">Wetterkontrolle. Bewohner wurden "Lost" (Ghule).</span>
+                        <span class="v-stat status-danger">GEFAHR</span>
+                    </div>
+                    <div class="vault-row vault-card" data-category="special">
+                        <span class="v-num">Vault 77</span>
+                        <span class="v-desc">Ein Mann mit Handpuppen. Wurde wahnsinnig.</span>
+                        <span class="v-stat status-unknown">LEGENDE</span>
+                    </div>
+                    <div class="vault-row vault-card" data-category="horror">
+                        <span class="v-num">Vault 87</span>
+                        <span class="v-desc">FEV-Labor. Supermutanten-Ursprung Ostküste.</span>
+                        <span class="v-stat status-danger">EXTREM</span>
+                    </div>
+                    <div class="vault-row vault-card" data-category="horror">
+                        <span class="v-num">Vault 108</span>
+                        <span class="v-desc">Nur Klone von Gary. Gary!</span>
+                        <span class="v-stat status-failed">GARY</span>
+                    </div>
+                    <div class="vault-row vault-card" data-category="cryo">
+                        <span class="v-num">Vault 112</span>
+                        <span class="v-desc">Tranquility Lane VR-Simulation.</span>
+                        <span class="v-stat status-active">SIMULATION</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FACTIONS SECTION -->
+            <section id="factions" class="section">
+                <div class="section-title">BEDROHUNGS-ANALYSE: FRAKTIONEN</div>
+                <div class="faction-grid">
+                    <div class="faction-card bos">
+                        <div class="faction-header">
+                            <div class="faction-icon"><img src="assets/images/R.webp" alt="Brotherhood of steel Emblem"></div>
+                            <div class="faction-name">BROTHERHOOD OF STEEL</div>
+                            <div class="faction-motto">"Ad Victoriam"</div>
+                        </div>
+                        <div class="faction-body">
+                            <div class="faction-data">
+                                <span><strong>FÜHRUNG:</strong> Ältester Maxson</span>
+                                <span><strong>HQ:</strong> Prydwen</span>
+                                <span><strong>STATUS:</strong> <span style="color: #ffaa00;">MILITÄRISCH STARK</span></span>
+                            </div>
+                            <p>Techno-religiöser Orden. Sammelt Technologie. Hassen Mutanten.</p>
+                            <div class="faction-verdict">BEURTEILUNG: NÜTZLICH ABER FANATISCH</div>
+                        </div>
+                    </div>
+                    <div class="faction-card enclave">
+                        <div class="faction-header">
+                            <div class="faction-icon"><img src="assets/images/F76_Enclave_Rug_Seal_Reconstructed.png" alt="Enklave logo"></div>
+                            <div class="faction-name">THE ENCLAVE</div>
+                            <div class="faction-motto">"Rebuilding America"</div>
+                        </div>
+                        <div class="faction-body">
+                            <div class="faction-data">
+                                <span><strong>FÜHRUNG:</strong> Unbekannt</span>
+                                <span><strong>HQ:</strong> Zerstört</span>
+                                <span><strong>STATUS:</strong> <span style="color: #ff3333;">FEINDLICH</span></span>
+                            </div>
+                            <p>Reste der US-Regierung. Wollen "reines" Amerika durch Genozid.</p>
+                            <div class="faction-verdict">BEURTEILUNG: TÖDLICHE BEDROHUNG</div>
+                        </div>
+                    </div>
+                    <div class="faction-card ncr">
+                        <div class="faction-header">
+                            <div class="faction-icon"><img src="assets/images/FOTV_Great_Seal_of_the_New_California_Republic_(recreated).png" alt="Great Seal of the New California Republic"></div>
+                            <div class="faction-name">NEW CALIFORNIA REPUBLIC</div>
+                            <div class="faction-motto">"Demokratie & Freiheit"</div>
+                        </div>
+                        <div class="faction-body">
+                            <div class="faction-data">
+                                <span><strong>FÜHRUNG:</strong> Präsident Kimball</span>
+                                <span><strong>HQ:</strong> Shady Sands</span>
+                                <span><strong>STATUS:</strong> <span style="color: #88cc00;">EXPANSIV</span></span>
+                            </div>
+                            <p>Versuch einer Demokratie im Westen. Korrupt aber zivilisiert.</p>
+                            <div class="faction-verdict">BEURTEILUNG: ZIVILISIERT</div>
+                        </div>
+                    </div>
+                    <div class="faction-card institute">
+                        <div class="faction-header">
+                            <div class="faction-icon"><img src="assets/images/Fo4_Institute_Seal.webp" alt="das Institut"></div>
+                            <div class="faction-name">THE INSTITUTE</div>
+                            <div class="faction-motto">"Mankind Redefined"</div>
+                        </div>
+                        <div class="faction-body">
+                            <div class="faction-data">
+                                <span><strong>FÜHRUNG:</strong> Vater</span>
+                                <span><strong>HQ:</strong> C.I.T. Ruins</span>
+                                <span><strong>STATUS:</strong> <span style="color: #00ccff;">GEHEIM</span></span>
+                            </div>
+                            <p>Wissenschaftler im Untergrund. Erschaffen Synths.</p>
+                            <div class="faction-verdict">BEURTEILUNG: UNBERECHENBAR</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- LOCATIONS SECTION -->
+            <section id="locations" class="section">
+                <div class="section-title">TERRAIN-SCAN: REGIONEN</div>
+                <div class="location-grid">
+                    <div class="location-card capital">
+                        <div class="loc-header">
+                            <span class="loc-code">SEC-03: D.C. RUINS</span>
+                            <h3>CAPITAL WASTELAND</h3>
+                        </div>
+                        <div class="loc-body">
+                            <div class="loc-stats">
+                                <div class="stat">RADS: EXTREM</div>
+                                <div class="stat">GEFAHR: SUPERMUTANTEN</div>
+                            </div>
+                            <p>Ruinen von Washington D.C. Trostlos und gefährlich.</p>
+                            <div class="loc-pois">
+                                <strong>WICHTIGE ORTE:</strong>
+                                <ul>
+                                    <li>Megaton</li>
+                                    <li>Rivet City</li>
+                                    <li>Die Zitadelle</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="location-card commonwealth">
+                        <div class="loc-header">
+                            <span class="loc-code">SEC-04: BOSTON</span>
+                            <h3>THE COMMONWEALTH</h3>
+                        </div>
+                        <div class="loc-body">
+                            <div class="loc-stats">
+                                <div class="stat">TECHNIK: HOCH</div>
+                                <div class="stat">PARANOIA: SYNTHS</div>
+                            </div>
+                            <p>Boston. Lebendiger als D.C., aber voller Paranoia.</p>
+                            <div class="loc-pois">
+                                <strong>WICHTIGE ORTE:</strong>
+                                <ul>
+                                    <li>Diamond City</li>
+                                    <li>Goodneighbor</li>
+                                    <li>Das Leuchtende Meer</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="location-card mojave">
+                        <div class="loc-header">
+                            <span class="loc-code">SEC-08: NEVADA</span>
+                            <h3>MOJAVE WASTELAND</h3>
+                        </div>
+                        <div class="loc-body">
+                            <div class="loc-stats">
+                                <div class="stat">HITZE: TÖDLICH</div>
+                                <div class="stat">MACHT: NEW VEGAS</div>
+                            </div>
+                            <p>Wüste um Las Vegas. Kampf um den Hoover Dam.</p>
+                            <div class="loc-pois">
+                                <strong>WICHTIGE ORTE:</strong>
+                                <ul>
+                                    <li>New Vegas Strip</li>
+                                    <li>Hoover Dam</li>
+                                    <li>Black Mountain</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        
+        <footer class="footer-stamp">
+            ★ VAULT-TEC ★<br>
+            REVOLUTIONIZING SAFETY FOR AN UNCERTAIN FUTURE<br>
+            <small style="font-size: 10px;">© 2077 Vault-Tec Corp. All Rights Reserved.</small>
+        </footer>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
